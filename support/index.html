@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ayaam Support</title>
+<meta name="description" content="Help and frequently asked questions for Ayaam (أيّام), a private period and cycle tracker for Muslim women. Available in English and Arabic.">
+<meta name="theme-color" content="#FAF6EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11231B" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<style>
+:root{
+  --bg:#FAF6EE; --surface:#FFFFFF; --ink:#22302A; --muted:#5F6A63; --soft:#8A948D;
+  --accent:#2F6B52; --accent-strong:#1C4634; --gold:#C19F4D; --line:#ECEFE9;
+  --line-strong:#DCE2DA; --chip:#F1ECE0;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#11231B; --surface:#172D23; --ink:#EEF1EC; --muted:#B4BFB8; --soft:#8A948D;
+    --accent:#8FCCAE; --accent-strong:#B5E0CA; --gold:#D6B86A; --line:#24392F;
+    --line-strong:#2F4A3D; --chip:#1C3429;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size:17px; line-height:1.65; overflow-wrap:break-word;
+}
+[lang="ar"]{
+  font-family:"SF Arabic","Geeza Pro","Noto Naskh Arabic",Tahoma,-apple-system,"Segoe UI",sans-serif;
+  line-height:1.9;
+}
+.wrap{max-width:720px; margin:0 auto; padding:0 20px}
+a{color:var(--accent); text-decoration-thickness:1px; text-underline-offset:3px}
+a:hover{color:var(--accent-strong)}
+a:focus-visible{outline:2px solid var(--gold); outline-offset:2px; border-radius:3px}
+.skip{position:absolute; left:-9999px; top:0}
+.skip:focus{left:12px; top:12px; background:var(--surface); padding:8px 12px; z-index:10}
+.lang-switch{
+  position:sticky; top:0; z-index:5; background:var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.lang-switch .wrap{display:flex; justify-content:flex-end; align-items:center; gap:4px; padding-top:10px; padding-bottom:10px}
+.lang-switch a{
+  display:inline-block; padding:6px 14px; border-radius:999px; text-decoration:none;
+  font-size:15px; font-weight:600; color:var(--accent-strong); background:var(--chip);
+}
+.lang-switch a:hover{background:var(--line-strong)}
+.lang-switch .sep{color:var(--soft); padding:0 2px}
+header.site{padding:48px 0 28px; text-align:center}
+.app-name{margin:0; font-size:34px; line-height:1.2; letter-spacing:-0.01em; color:var(--accent-strong)}
+.app-name .ar{font-weight:600; margin-inline-start:.35em}
+.doc-type{margin:6px 0 0; font-size:20px; font-weight:500; color:var(--ink)}
+.rule{width:56px; height:3px; border:0; background:var(--gold); border-radius:2px; margin:20px auto}
+.effective{margin:0; color:var(--muted); font-size:15px}
+main section{padding:8px 0 40px; scroll-margin-top:64px}
+main section + section{border-top:2px solid var(--line-strong); padding-top:40px}
+h2{font-size:27px; line-height:1.3; margin:0 0 12px; color:var(--accent-strong)}
+h3{
+  font-size:21px; line-height:1.35; margin:44px 0 10px; color:var(--ink);
+  padding-top:14px; border-top:1px solid var(--line); scroll-margin-top:64px;
+}
+.anchor{display:block; scroll-margin-top:64px}
+p{margin:0 0 16px}
+ul{margin:0 0 18px; padding-inline-start:1.4em}
+li{margin:4px 0}
+li::marker{color:var(--gold)}
+strong{font-weight:650; color:var(--accent-strong)}
+@media (prefers-color-scheme: dark){strong{color:var(--ink)}}
+.toc{
+  background:var(--surface); border:1px solid var(--line); border-inline-start:3px solid var(--gold);
+  border-radius:12px; padding:16px 20px; margin:24px 0 8px;
+}
+.toc .toc-title{
+  margin:0 0 6px; padding:0; border:0; font-size:13px; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted);
+}
+[lang="ar"] .toc .toc-title{letter-spacing:0; text-transform:none; font-size:15px}
+.toc ol{list-style:none; margin:0; padding:0}
+.toc li{margin:2px 0}
+.toc a{text-decoration:none; display:inline-block; padding:3px 0}
+.toc a:hover{text-decoration:underline}
+.table-wrap{margin:8px 0 20px; overflow-x:auto; -webkit-overflow-scrolling:touch}
+table{width:100%; border-collapse:collapse; font-size:15px; line-height:1.55; background:var(--surface);
+  border:1px solid var(--line); border-radius:10px}
+th,td{text-align:start; vertical-align:top; padding:10px 12px; border-bottom:1px solid var(--line)}
+thead th{background:var(--chip); color:var(--accent-strong); font-size:14px}
+tbody th{font-weight:600; min-width:8em}
+tbody th strong{color:inherit}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+footer.site{border-top:1px solid var(--line); padding:28px 0 48px; color:var(--muted); font-size:15px; text-align:center}
+footer.site p{margin:4px 0}
+@media (max-width:600px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  header.site{padding:32px 0 20px}
+  .app-name{font-size:28px}
+  h2{font-size:23px}
+  h3{font-size:19px}
+  /* stack the Firebase table into cards on narrow screens */
+  table,thead,tbody,tr,th,td{display:block; width:100%}
+  table{border:0; background:transparent}
+  thead{position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden}
+  tbody tr{background:var(--surface); border:1px solid var(--line); border-radius:10px; margin:0 0 12px; padding:4px 0}
+  tbody th,tbody td{border-bottom:0; padding:6px 14px}
+  tbody th{font-size:16px; color:var(--accent-strong); padding-top:10px}
+  tbody td::before{content:attr(data-label); display:block; font-size:12px; font-weight:600;
+    letter-spacing:.05em; text-transform:uppercase; color:var(--muted)}
+  [lang="ar"] tbody td::before{letter-spacing:0; text-transform:none; font-size:13px}
+}
+@media print{
+  :root{--bg:#fff; --surface:#fff; --ink:#000; --muted:#000; --soft:#000; --accent:#000;
+    --accent-strong:#000; --gold:#000; --line:#999; --line-strong:#999; --chip:#fff}
+  body{background:#fff; color:#000; font-size:11pt}
+  .lang-switch,.skip,.toc{display:none}
+  a{color:#000; text-decoration:none}
+  .wrap{max-width:none; padding:0}
+  header.site{padding:0 0 12pt}
+  main section + section{break-before:page; border-top:0}
+  h3{break-after:avoid; border-top:0}
+  table,tr{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#en">Skip to support</a>
+<nav class="lang-switch" aria-label="Language">
+<div class="wrap">
+<a href="#en" hreflang="en" lang="en">English</a>
+<span class="sep" aria-hidden="true">|</span>
+<a href="#ar" hreflang="ar" lang="ar" dir="rtl">العربية</a>
+</div>
+</nav>
+<div class="wrap">
+<header class="site">
+<h1 class="app-name">Ayaam <span class="ar" lang="ar" dir="rtl">أيّام</span></h1>
+<p class="doc-type">Support · <span lang="ar" dir="rtl">الدعم</span></p>
+<hr class="rule">
+<p class="effective"><a href="https://andrashaai.github.io/ayaam-privacy/">Privacy Policy</a> · <span lang="ar" dir="rtl"><a href="https://andrashaai.github.io/ayaam-privacy/#ar">سياسة الخصوصية</a></span></p>
+</header>
+<main>
+<section id="en" lang="en" dir="ltr">
+<h2>Ayaam Support</h2>
+<p><strong>Ayaam</strong> is a private period and cycle tracker for Muslim women. It shows your cycle and predicted dates, and follows the fiqh rulings of your madhhab (Hanafi, Shafi'i, Maliki or Hanbali). It tells you when prayer and fasting are paused, keeps count of the Ramadan fasts you need to make up (qada), and guides you through ghusl. It works in English and Arabic, and your data stays on your iPhone.</p>
+<p>Need help? Email <strong><a href="mailto:andrushen.work@gmail.com">andrushen.work@gmail.com</a></strong>. We usually reply within a few working days.</p>
+<nav class="toc" aria-label="Contents">
+<p class="toc-title">Frequently asked questions</p>
+<ol>
+<li><a href="#en-1">Where is my data stored?</a></li>
+<li><a href="#en-2">Will my data move to a new iPhone?</a></li>
+<li><a href="#en-3">Does Ayaam use iCloud?</a></li>
+<li><a href="#en-4">How do I lock the app with Face ID?</a></li>
+<li><a href="#en-5">What is the discreet icon?</a></li>
+<li><a href="#en-6">Can reminders say what they're about?</a></li>
+<li><a href="#en-7">How do I turn reminders on or off?</a></li>
+<li><a href="#en-8">How do I delete my data?</a></li>
+<li><a href="#en-9">Can I export my data?</a></li>
+<li><a href="#en-10">Why does Ayaam ask for my location?</a></li>
+<li><a href="#en-11">How accurate are the fiqh rulings?</a></li>
+<li><a href="#en-12">Can I change my madhhab?</a></li>
+<li><a href="#en-13">Can I use the predictions to avoid or plan a pregnancy?</a></li>
+<li><a href="#en-14">Is Ayaam free? Are there ads?</a></li>
+<li><a href="#en-15">Which languages are supported?</a></li>
+<li><a href="#en-16">The app is asking me to update. Why?</a></li>
+</ol>
+</nav>
+<h3 id="en-1">Where is my data stored?</h3>
+<p>Only on your iPhone, in Ayaam's private app storage. You don't need an account, and we have no server that stores your cycle, symptoms, mood, name or madhhab. We can't see your data. A small amount of technical and usage information (crash reports, performance data and anonymous feature-usage events) goes to Google Firebase to help us fix bugs. It never includes your period dates, cycle length, symptoms, mood, name, birth date, madhhab or your device location. Full details are in our <a href="https://andrashaai.github.io/ayaam-privacy/">Privacy Policy</a>.</p>
+<h3 id="en-2">Will my data move to a new iPhone?</h3>
+<p>Ayaam doesn't sync, so your data only moves together with your phone's backup.</p>
+<ul>
+<li><strong>Data transfers if</strong> you set up the new iPhone from an <strong>iCloud Backup</strong> or a <strong>computer backup (Finder/iTunes)</strong> of your old phone, or with <strong>Quick Start</strong> (direct transfer between iPhones). Ayaam's data is part of that backup or transfer.</li>
+<li><strong>Data doesn't transfer if</strong> you set up the new iPhone as new and then download Ayaam from the App Store. Ayaam will start empty.</li>
+<li>Deleting and reinstalling Ayaam on the same iPhone also starts it empty.</li>
+</ul>
+<p>Before you switch phones, make sure your old iPhone has a recent backup (Settings → your name at the top → iCloud → iCloud Backup).</p>
+<h3 id="en-3">Does Ayaam use iCloud?</h3>
+<p>No. Ayaam doesn't use iCloud Drive or iCloud sync. Your data is only included in iCloud as part of your iPhone's own full device backup, if you have iCloud Backup turned on. That backup is linked to your Apple Account, and we have no access to it.</p>
+<h3 id="en-4">How do I lock the app with Face ID?</h3>
+<p>Go to <strong>Me → Privacy &amp; lock</strong> and turn on <strong>Require Face ID or passcode</strong> (under App Lock). Ayaam will then ask for Face ID, Touch ID or your iPhone passcode each time you open it or come back to it. Apple handles the face scan, and Ayaam only learns whether it succeeded. If Face ID fails, you can use your iPhone passcode.</p>
+<h3 id="en-5">What is the discreet icon?</h3>
+<p>Turn it on in <strong>Me → Privacy &amp; lock → Discreet app icon</strong> to replace Ayaam's icon on your Home Screen with a neutral one. iOS will show a short message confirming the change. Reminder text is discreet by default too; see the next question.</p>
+<h3 id="en-6">Can reminders say what they're about?</h3>
+<p>By default <strong>Discreet notifications</strong> is on, so reminders say only "A gentle reminder from Ayaam" and nothing personal appears on your lock screen. If you prefer clear wording (for example "Your cycle may start tomorrow"), turn off <strong>Me → Privacy &amp; lock → Discreet notifications</strong>. Anyone who can see your lock screen will then be able to read it. The option works while reminders are on.</p>
+<h3 id="en-7">How do I turn reminders on or off?</h3>
+<p>Go to <strong>Me → Privacy &amp; lock → Reminders</strong>. Reminders are created on your iPhone itself and don't come from a server. If they don't appear, check iOS <strong>Settings → Notifications → Ayaam</strong>.</p>
+<h3 id="en-8">How do I delete my data?</h3>
+<ul>
+<li><strong>Delete all data in the app:</strong> go to <strong>Me → Privacy &amp; lock → Delete all data</strong> and confirm. This erases your cycle history, logs, profile, madhhab and qada balance, and cancels reminders. It can't be undone. Your app settings (language, App Lock, discreet icon, reminders, discreet notifications) are kept.</li>
+<li><strong>Remove everything:</strong> delete the Ayaam app from your iPhone. Older iPhone backups may still contain earlier data until those backups are replaced or deleted.</li>
+</ul>
+<h3 id="en-9">Can I export my data?</h3>
+<p>Yes. Go to <strong>Me → Export report</strong>. Ayaam creates a text summary of your logged period dates, cycle and period averages, cycle regularity and madhhab, and opens the iOS share sheet so you can save or send it. Where it goes is your choice; we never receive it.</p>
+<h3 id="en-10">Why does Ayaam ask for my location?</h3>
+<p>Only to estimate suhoor (Fajr) and iftar (Maghrib) times on the Ramadan tab. Ayaam uses your approximate location, does the calculation on your iPhone, and never saves or sends your location. If you don't allow it, times are estimated for Dubai. Times follow the Umm al-Qura convention and are estimates, so please confirm them with your local mosque. To change the permission, go to iOS Settings → Privacy &amp; Security → Location Services → Ayaam.</p>
+<h3 id="en-11">How accurate are the fiqh rulings?</h3>
+<p>Ayaam applies the commonly taught rulings of the madhhab you select. Examples are the minimum and maximum length of hayd (menstruation), the minimum clean gap between two periods, which prayers are not made up, which fasts are made up, and when ghusl is required. These rules are general guidance. Scholars can differ, and personal situations can be complex, for example irregular bleeding, postpartum bleeding (nifas) or spotting. <strong>For a ruling on your specific situation, please ask a qualified scholar you trust.</strong> If you think a rule is wrong for your madhhab, email us with the details and your source. We review every report.</p>
+<h3 id="en-12">Can I change my madhhab?</h3>
+<p>Yes. Go to <strong>Me → Madhhab</strong> and choose another school. Ayaam recalculates your status straight away.</p>
+<h3 id="en-13">Can I use the predictions to avoid or plan a pregnancy?</h3>
+<p><strong>No.</strong> Predicted periods, fertile days and ovulation dates are estimates based on what you've logged. They are not medical advice and must not be used as contraception or to plan or avoid pregnancy. If your cycle is irregular, very painful or worries you in any way, please see a doctor.</p>
+<h3 id="en-14">Is Ayaam free? Are there ads?</h3>
+<p>Ayaam is free, with no in-app purchases, no ads and no tracking.</p>
+<h3 id="en-15">Which languages are supported?</h3>
+<p>English and Arabic. Change the language in <strong>Me → Language</strong>.</p>
+<h3 id="en-16">The app is asking me to update. Why?</h3>
+<p>Sometimes an older version must be updated to keep working correctly. Tap <strong>Update Now</strong> to open the App Store. Your data stays on your phone and isn't affected by updating.</p>
+<h3 id="en-17">Contact</h3>
+<p>Email: <strong><a href="mailto:andrushen.work@gmail.com">andrushen.work@gmail.com</a></strong><br>
+Developer: Andrei Belausau, United Arab Emirates<br>
+Privacy Policy: <a href="https://andrashaai.github.io/ayaam-privacy/">https://andrashaai.github.io/ayaam-privacy/</a></p>
+</section>
+<section id="ar" lang="ar" dir="rtl">
+<h2>دعم تطبيق أيّام</h2>
+<p><strong>أيّام</strong> تطبيق لمتابعة الدورة الشهرية يحفظ خصوصيتكِ، صُمّم للمرأة المسلمة. يعرض دورتكِ والتواريخ المتوقعة، ويتّبع الأحكام الفقهية لمذهبكِ (الحنفي أو الشافعي أو المالكي أو الحنبلي). يوضّح لكِ متى تسقط الصلاة ويُترك الصيام، ويحسب لكِ ما فاتكِ من صيام رمضان لتقضيه (القضاء)، ويرشدكِ إلى خطوات الغُسل. يعمل بالعربية والإنجليزية، وبياناتكِ تبقى على جهاز iPhone الخاص بكِ.</p>
+<p>هل تحتاجين إلى مساعدة؟ راسلينا على <strong><a href="mailto:andrushen.work@gmail.com">andrushen.work@gmail.com</a></strong>، ونرد عادةً خلال أيام عمل قليلة.</p>
+<nav class="toc" aria-label="المحتويات">
+<p class="toc-title">الأسئلة الشائعة</p>
+<ol>
+<li><a href="#ar-1">أين تُحفظ بياناتي؟</a></li>
+<li><a href="#ar-2">هل تنتقل بياناتي إلى جهاز iPhone جديد؟</a></li>
+<li><a href="#ar-3">هل يستخدم «أيّام» خدمة iCloud؟</a></li>
+<li><a href="#ar-4">كيف أقفل التطبيق ببصمة الوجه؟</a></li>
+<li><a href="#ar-5">ما هي الأيقونة السرّية؟</a></li>
+<li><a href="#ar-6">هل يمكن أن توضّح التذكيرات موضوعها؟</a></li>
+<li><a href="#ar-7">كيف أشغّل التذكيرات أو أوقفها؟</a></li>
+<li><a href="#ar-8">كيف أحذف بياناتي؟</a></li>
+<li><a href="#ar-9">هل يمكنني تصدير بياناتي؟</a></li>
+<li><a href="#ar-10">لماذا يطلب «أيّام» موقعي؟</a></li>
+<li><a href="#ar-11">ما مدى دقة الأحكام الفقهية؟</a></li>
+<li><a href="#ar-12">هل يمكنني تغيير المذهب؟</a></li>
+<li><a href="#ar-13">هل يمكنني استخدام التوقعات لتجنّب الحمل أو التخطيط له؟</a></li>
+<li><a href="#ar-14">هل «أيّام» مجاني؟ وهل فيه إعلانات؟</a></li>
+<li><a href="#ar-15">ما اللغات المدعومة؟</a></li>
+<li><a href="#ar-16">التطبيق يطلب مني التحديث، لماذا؟</a></li>
+</ol>
+</nav>
+<h3 id="ar-1">أين تُحفظ بياناتي؟</h3>
+<p>على جهاز iPhone الخاص بكِ فقط، داخل مساحة التخزين الخاصة بالتطبيق. لا تحتاجين إلى حساب، وليس لدينا خادم يخزّن بيانات دورتكِ أو أعراضكِ أو مزاجكِ أو اسمكِ أو مذهبكِ، ولا يمكننا رؤية بياناتكِ. يُرسل قدر محدود من المعلومات التقنية ومعلومات الاستخدام (تقارير الأعطال، وبيانات الأداء، وأحداث استخدام مجهولة الهوية) إلى Google Firebase لمساعدتنا على إصلاح الأخطاء، ولا يتضمن أبداً تواريخ حيضكِ أو طول دورتكِ أو أعراضكِ أو مزاجكِ أو اسمكِ أو تاريخ ميلادكِ أو مذهبكِ أو موقع جهازكِ. التفاصيل الكاملة في <a href="https://andrashaai.github.io/ayaam-privacy/">سياسة الخصوصية</a>.</p>
+<h3 id="ar-2">هل تنتقل بياناتي إلى جهاز iPhone جديد؟</h3>
+<p>لا يزامن «أيّام» البيانات، لذا تنتقل بياناتكِ فقط مع النسخة الاحتياطية لجهازكِ.</p>
+<ul>
+<li><strong>تنتقل البيانات إذا</strong> أعددتِ الجهاز الجديد من <strong>نسخة iCloud الاحتياطية</strong> أو من <strong>نسخة احتياطية على الحاسوب (Finder/iTunes)</strong> لجهازكِ القديم، أو عبر <strong>البدء السريع</strong> (النقل المباشر بين جهازي iPhone). بيانات «أيّام» جزء من تلك النسخة أو النقل.</li>
+<li><strong>لا تنتقل البيانات إذا</strong> أعددتِ الجهاز الجديد كجهاز جديد ثم نزّلتِ «أيّام» من App Store. سيبدأ التطبيق فارغاً.</li>
+<li>حذف «أيّام» ثم إعادة تثبيته على الجهاز نفسه يجعله يبدأ فارغاً أيضاً.</li>
+</ul>
+<p>قبل تغيير جهازكِ، تأكدي من وجود نسخة احتياطية حديثة لجهازكِ القديم (الإعدادات ← اسمكِ في الأعلى ← iCloud ← نسخ iCloud الاحتياطي).</p>
+<h3 id="ar-3">هل يستخدم «أيّام» خدمة iCloud؟</h3>
+<p>لا. لا يستخدم «أيّام» iCloud Drive ولا مزامنة iCloud. تُضمَّن بياناتكِ في iCloud فقط ضمن النسخة الاحتياطية الكاملة لجهازكِ، إذا كان «نسخ iCloud الاحتياطي» مفعّلاً لديكِ. تلك النسخة مرتبطة بحساب Apple الخاص بكِ، ولا يمكننا الوصول إليها.</p>
+<h3 id="ar-4">كيف أقفل التطبيق ببصمة الوجه؟</h3>
+<p>اذهبي إلى <strong>حسابي ← الخصوصية والقفل</strong> وفعّلي <strong>طلب Face ID أو رمز الدخول</strong> (ضمن قفل التطبيق). سيطلب «أيّام» بعدها بصمة الوجه أو بصمة الإصبع أو رمز دخول جهازكِ في كل مرة تفتحينه أو تعودين إليه. تتولى Apple عملية التعرّف على الوجه، ولا يعرف «أيّام» إلا هل نجحت أم لا. إذا لم تنجح بصمة الوجه يمكنكِ استخدام رمز دخول الجهاز.</p>
+<h3 id="ar-5">ما هي الأيقونة السرّية؟</h3>
+<p>فعّليها من <strong>حسابي ← الخصوصية والقفل ← أيقونة سرّية</strong> لاستبدال أيقونة «أيّام» على الشاشة الرئيسية بأيقونة محايدة. سيعرض iOS رسالة قصيرة تؤكد التغيير. ونصوص التذكيرات محتشمة افتراضياً أيضاً، راجعي السؤال التالي.</p>
+<h3 id="ar-6">هل يمكن أن توضّح التذكيرات موضوعها؟</h3>
+<p>خيار <strong>إشعارات محتشمة</strong> مفعّل افتراضياً، فتقول التذكيرات فقط «تذكير لطيف من أيّام» ولا يظهر أي شيء شخصي على شاشة القفل. إذا فضّلتِ نصاً واضحاً (مثل «قد تبدأ دورتكِ غدًا»)، أوقفي <strong>حسابي ← الخصوصية والقفل ← إشعارات محتشمة</strong>، وعندها يستطيع أي شخص يرى شاشة القفل قراءته. يعمل هذا الخيار عندما تكون التذكيرات مفعّلة.</p>
+<h3 id="ar-7">كيف أشغّل التذكيرات أو أوقفها؟</h3>
+<p>اذهبي إلى <strong>حسابي ← الخصوصية والقفل ← التذكيرات</strong>. تُنشأ التذكيرات على جهازكِ نفسه ولا تأتي من أي خادم. إذا لم تظهر، تحققي من <strong>الإعدادات ← الإشعارات ← أيّام</strong> في iOS.</p>
+<h3 id="ar-8">كيف أحذف بياناتي؟</h3>
+<ul>
+<li><strong>حذف جميع البيانات داخل التطبيق:</strong> اذهبي إلى <strong>حسابي ← الخصوصية والقفل ← حذف كل البيانات</strong> وأكّدي. يمحو ذلك سجل دورتكِ وسجلاتكِ وملفكِ الشخصي ومذهبكِ ورصيد القضاء، ويلغي التذكيرات. لا يمكن التراجع عن ذلك. تبقى إعدادات التطبيق (اللغة، وقفل التطبيق، والأيقونة السرّية، والتذكيرات، والإشعارات المحتشمة) كما هي.</li>
+<li><strong>إزالة كل شيء:</strong> احذفي تطبيق «أيّام» من جهازكِ. قد تبقى بيانات سابقة في نسخ احتياطية قديمة لجهازكِ إلى أن تُستبدل تلك النسخ أو تُحذف.</li>
+</ul>
+<h3 id="ar-9">هل يمكنني تصدير بياناتي؟</h3>
+<p>نعم. اذهبي إلى <strong>حسابي ← تصدير التقرير</strong>. يُنشئ «أيّام» ملخّصاً نصياً لتواريخ الحيض المسجّلة، ومتوسط طول الدورة ومدة الحيض، وانتظام الدورة، ومذهبكِ، ويفتح قائمة المشاركة في iOS لتحفظيه أو ترسليه. أنتِ من تختارين أين يذهب، ولا نستلمه أبداً.</p>
+<h3 id="ar-10">لماذا يطلب «أيّام» موقعي؟</h3>
+<p>فقط لتقدير وقتي السحور (الفجر) والإفطار (المغرب) في قسم رمضان. يستخدم «أيّام» موقعكِ التقريبي، ويُجري الحساب على جهازكِ، ولا يحفظ موقعكِ ولا يرسله أبداً. إذا لم تسمحي بذلك، تُقدَّر الأوقات لمدينة دبي. تتبع الأوقات تقويم أم القرى وهي تقديرية، لذا يُرجى التأكد منها من مسجدكِ المحلي. لتغيير الإذن: إعدادات iOS ← الخصوصية والأمن ← خدمات الموقع ← أيّام.</p>
+<h3 id="ar-11">ما مدى دقة الأحكام الفقهية؟</h3>
+<p>يطبّق «أيّام» الأحكام الشائعة في المذهب الذي تختارينه. من أمثلتها أقل مدة الحيض وأكثرها، وأقل الطهر بين حيضتين، وأن الصلاة لا تُقضى، وأن الصيام يُقضى، ومتى يجب الغُسل. هذه الأحكام إرشادات عامة، وقد يختلف العلماء، وقد تكون بعض الحالات الشخصية معقّدة، مثل الدم غير المنتظم أو النفاس أو التنقيط. <strong>للحكم في حالتكِ الخاصة، يُرجى سؤال عالم مؤهل تثقين به.</strong> إذا رأيتِ أن حكماً ما غير صحيح في مذهبكِ، راسلينا مع التفاصيل والمصدر، فنحن نراجع كل ملاحظة.</p>
+<h3 id="ar-12">هل يمكنني تغيير المذهب؟</h3>
+<p>نعم. اذهبي إلى <strong>حسابي ← المذهب</strong> واختاري مذهباً آخر، وسيعيد «أيّام» حساب حالتكِ فوراً.</p>
+<h3 id="ar-13">هل يمكنني استخدام التوقعات لتجنّب الحمل أو التخطيط له؟</h3>
+<p><strong>لا.</strong> مواعيد الدورة المتوقعة وأيام الخصوبة والإباضة تقديرات مبنية على ما سجّلتِه. ليست نصيحة طبية، ولا تصلح وسيلةً لمنع الحمل ولا للتخطيط للحمل أو تجنّبه. إذا كانت دورتكِ غير منتظمة أو مؤلمة جداً أو تقلقكِ لأي سبب، فيُرجى مراجعة الطبيب.</p>
+<h3 id="ar-14">هل «أيّام» مجاني؟ وهل فيه إعلانات؟</h3>
+<p>«أيّام» مجاني، بلا مشتريات داخل التطبيق، وبلا إعلانات، وبلا تتبّع.</p>
+<h3 id="ar-15">ما اللغات المدعومة؟</h3>
+<p>العربية والإنجليزية. يمكنكِ تغيير اللغة من <strong>حسابي ← اللغة</strong>.</p>
+<h3 id="ar-16">التطبيق يطلب مني التحديث، لماذا؟</h3>
+<p>أحياناً يلزم تحديث الإصدار القديم ليستمر في العمل بشكل صحيح. اضغطي <strong>التحديث الآن</strong> لفتح App Store. بياناتكِ تبقى على جهازكِ ولا تتأثر بالتحديث.</p>
+<h3 id="ar-17">التواصل</h3>
+<p>البريد الإلكتروني: <strong><a href="mailto:andrushen.work@gmail.com">andrushen.work@gmail.com</a></strong><br>
+المطوّر: Andrei Belausau، الإمارات العربية المتحدة<br>
+سياسة الخصوصية: <a href="https://andrashaai.github.io/ayaam-privacy/">https://andrashaai.github.io/ayaam-privacy/</a></p>
+</section>
+</main>
+<footer class="site">
+<p>© 2026 Andrei Belausau</p>
+<p>Contact: <a href="mailto:andrushen.work@gmail.com">andrushen.work@gmail.com</a> · <span lang="ar" dir="rtl">للتواصل: <a href="mailto:andrushen.work@gmail.com">andrushen.work@gmail.com</a></span></p>
+</footer>
+</div>
+</body>
+</html>
